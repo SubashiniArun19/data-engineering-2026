@@ -1,0 +1,13 @@
+numbers={10,20,30,40}
+print(numbers)
+numbers={10,20,20,30,40,40}
+print(numbers)
+num=[10,20,20,30,40,40]
+unique_num=set(num)
+print(unique_num)
+numbers={10,20,30}
+numbers.add(40)
+print(numbers)
+numbers={10,20}
+numbers.update([30,40,50])
+print(numbers)

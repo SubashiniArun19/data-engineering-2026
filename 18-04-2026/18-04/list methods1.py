@@ -1,0 +1,11 @@
+#
+numbers=[10,20,30,40,50]
+print(numbers)
+fruits=["apple","banana","mango"]
+print(fruits[0])
+print(numbers[1])
+print(numbers[-1])
+print(numbers[-2])
+numbers[3]=100
+numbers.append(80)
+print(numbers)
