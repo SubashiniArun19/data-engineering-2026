@@ -1,0 +1,23 @@
+from Functions import *
+visits = load_visits("website_visits.txt")
+products_data = load_products("products.json")
+orders = load_orders("orders.csv")
+unique_visitors = set(visits)
+total_visits = len(visits)
+unique_count = len(unique_visitors)
+revenue_tuples = calc_product_revenue(orders, products_data)
+product_sales = dict(revenue_tuples)
+total_revenue = sum(v["revenue"] for v in product_sales.values())
+customer_spending = calc_customer_spending(orders, products_data)
+top_customer = find_top_customer(customer_spending)
+with open("sales_report.txt", "w",encoding="utf-8") as f:
+    f.write("E-Commerce Sales Report\n")
+    f.write("---------------------------\n")
+    f.write(f"Total Website Visits: {total_visits}\n")
+    f.write(f"Unique Visitors: {unique_count}\n")
+    f.write(f"Total Revenue: {total_revenue}\n\n")
+    f.write(f"Top Customer: {top_customer[0]}\n\n")
+    f.write("Product Sales\n")
+    for name, revenue in product_sales.items():
+        f.write(f"{name} → {revenue}\n")
+print("sales_report.txt created successfully!")

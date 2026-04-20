@@ -1,0 +1,13 @@
+E-Commerce Sales Report
+---------------------------
+Total Website Visits: 10
+Unique Visitors: 5
+Total Revenue: 181000
+
+Top Customer: Rahul
+
+Product Sales
+101 → {'name': 'Laptop', 'revenue': 150000}
+102 → {'name': 'Mouse', 'revenue': 2500}
+103 → {'name': 'Keyboard', 'revenue': 4500}
+104 → {'name': 'Monitor', 'revenue': 24000}
