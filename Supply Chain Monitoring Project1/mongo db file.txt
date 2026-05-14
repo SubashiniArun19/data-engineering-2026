@@ -1,0 +1,6 @@
+use supply_chain_logs
+
+db.shipments.insertMany([{shipment_id: 1,order_id: 101,status: "In Transit",location: "Chennai",timestamp: new Date()},
+{shipment_id: 2,order_id: 102,status: "Delivered",location: "Bangalore",timestamp: new Date()}])
+
+db.shipments.createIndex({order_id:1})

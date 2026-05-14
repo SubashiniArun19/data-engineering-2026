@@ -1,0 +1,22 @@
+use("customer_feedback_db")
+
+db.feedback.insertMany([{customer_id: 101,customer_name: "Arun",feedback: "Late delivery but product quality was excellent",
+rating: 3,issue_type: "Late Shipment"},
+{customer_id: 102,customer_name: "Priya",feedback: "Delivery was on time and packaging was good",
+ rating: 5,issue_type: "No Issue"},
+{customer_id: 103,customer_name: "Karthik",feedback: "Shipment delayed because of bad weather conditions",
+ rating: 2,issue_type: "Weather Delay"},
+{customer_id: 104,customer_name: "Meena",feedback: "Customer support responded quickly",
+ rating: 4,issue_type: "Support"},
+{customer_id: 105,customer_name: "Rahul",feedback: "Tracking updates were inaccurate",
+ rating: 3,issue_type: "Tracking Issue"}])
+
+db.feedback.find()
+
+db.feedback.find({customer_id:101})
+
+db.feedback.createIndex({customer_id:1})
+
+db.feedback.find({issue_type:"Late Shipment"})
+
+db.feedback.find({rating:{$lt:4}})
